@@ -28,7 +28,7 @@ def mostrar_libro(request, id_libro: int,template_name: str='libros/libro.html')
 
 def modificar_libro(request, id_libro: int, template_name: str='libros/libros_form.html'):
   libro = Libros.objects.get(id=id_libro)
-  form = LibrosForm(reques.POST or None, instance=libro)
+  form = LibrosForm(request.POST or None, instance=libro)
   if request.method == 'POST':
     if form.is_valid():
       form.save(commit=True)

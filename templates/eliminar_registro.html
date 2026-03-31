@@ -1,10 +1,45 @@
 {% extends "base.html" %}
-{% block titulo %} eliminar registro {% endblock %}
-{% block titulo_principal %} eliminar registro {% endblock %}
-{% block titulo_secundario %} esta seguro de que desea eliminar este registro {% endblock %}
-{% block principal %} 
-<form method="post">
-  {% csrf_token %}
-  <input type="submit" value="Confirmar" class="btn btn-primary">
-</form>
+{% load static %}
+
+{% block titulo %}Eliminar registro{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/delete.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<section class="delete-section">
+  <div class="glass-card delete-card">
+    <div class="delete-icon">⚠</div>
+
+    <span class="delete-badge">Confirmación</span>
+
+    <h1 class="delete-title">¿Eliminar registro?</h1>
+
+    <p class="delete-text">
+      Estás por eliminar este registro de forma permanente.
+      Esta acción no se puede deshacer.
+    </p>
+
+    {% if objeto %}
+      <div class="delete-detail">
+        <p><strong>Registro:</strong> {{ objeto }}</p>
+      </div>
+    {% endif %}
+
+    <form method="post" class="delete-form">
+      {% csrf_token %}
+
+      <div class="delete-actions">
+        <button type="submit" class="btn btn-danger btn-lg rounded-4">
+          Sí, eliminar
+        </button>
+
+        <a href="{% url 'libros' %}" class="btn btn-light btn-lg rounded-4">
+          Cancelar
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
 {% endblock %}
