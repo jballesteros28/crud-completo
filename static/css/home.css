@@ -1,0 +1,132 @@
+.hero-card {
+    padding: 2.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-card::before {
+    content: "";
+    position: absolute;
+    inset: auto -80px -80px auto;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(13, 110, 253, 0.08);
+    filter: blur(10px);
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.06);
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.1rem, 5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text {
+    font-size: 1.05rem;
+    color: #64748b;
+    max-width: 640px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+  }
+
+  .btn-soft {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    color: #0f172a;
+    font-weight: 600;
+    border-radius: 14px;
+    padding: 0.8rem 1.1rem;
+  }
+
+  .btn-soft:hover {
+    background: #f8fafc;
+    border-color: rgba(15, 23, 42, 0.12);
+  }
+
+  .feature-card {
+    height: 100%;
+    padding: 1.4rem;
+  }
+
+  .feature-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(13, 110, 253, 0.10);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+
+  .feature-text {
+    color: #64748b;
+    margin-bottom: 0;
+  }
+
+  .quick-access-card {
+    padding: 1.8rem;
+  }
+
+  .quick-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #0f172a;
+    padding: 1rem 1.1rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    transition: 0.2s ease;
+    margin-bottom: 0.9rem;
+  }
+
+  .quick-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    background: #fff;
+  }
+
+  .quick-link:last-child {
+    margin-bottom: 0;
+  }
+
+  .muted-label {
+    color: #64748b;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-card {
+      padding: 1.5rem;
+    }
+
+    .quick-access-card {
+      padding: 1.2rem;
+    }
+  }

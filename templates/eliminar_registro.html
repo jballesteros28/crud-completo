@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block titulo %} eliminar registro {% endblock %}
+{% block titulo_principal %} eliminar registro {% endblock %}
+{% block titulo_secundario %} esta seguro de que desea eliminar este registro {% endblock %}
+{% block principal %} 
+<form method="post">
+  {% csrf_token %}
+  <input type="submit" value="Confirmar" class="btn btn-primary">
+</form>
+{% endblock %}

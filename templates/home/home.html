@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Inicio | CRUD Django{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<section class="mb-4 mb-md-5">
+  <div class="glass-card hero-card">
+    <span class="hero-badge">Sistema CRUD</span>
+
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <h1 class="hero-title">Gestiona usuarios y libros de forma simple.</h1>
+        <p class="hero-text">
+          Un panel limpio, rápido y responsive para administrar registros con Django.
+          Sin humo, sin decoración innecesaria, y sin pelearte con la interfaz como si fuera un boss final.
+        </p>
+        <div class="hero-actions">
+          <a href="/usuarios/usuarios" class="btn btn-dark btn-lg rounded-4">
+            Ver usuarios
+          </a>
+          <a href="/libros/libros" class="btn btn-soft btn-lg">
+            Ver libros
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="glass-card p-4">
+          <p class="muted-label mb-2">Acceso rápido</p>
+          <h3 class="h4 fw-bold mb-3">¿Qué quieres administrar hoy?</h3>
+
+          <a href="/usuarios/usuarios" class="quick-link">
+            <div>
+              <div class="fw-semibold">Módulo de usuarios</div>
+              <div class="muted-label">Alta, edición, visualización y eliminación</div>
+            </div>
+            <span>→</span>
+          </a>
+
+          <a href="/libros/libros" class="quick-link">
+            <div>
+              <div class="fw-semibold">Módulo de libros</div>
+              <div class="muted-label">Consulta y mantenimiento de registros</div>
+            </div>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="glass-card feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">Rápido</h3>
+        <p class="feature-text">
+          Navegación clara y acceso directo a las operaciones principales del sistema.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="glass-card feature-card">
+        <div class="feature-icon">📱</div>
+        <h3 class="feature-title">Responsive</h3>
+        <p class="feature-text">
+          Diseño adaptado para escritorio, tablet y móvil sin romperse a la primera.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="glass-card feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Minimalista</h3>
+        <p class="feature-text">
+          Interfaz limpia, moderna y enfocada en lo importante: gestionar datos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

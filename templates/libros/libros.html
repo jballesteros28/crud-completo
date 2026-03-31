@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Libros{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/libros.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<section class="module-header mb-4">
+  <div class="glass-card module-hero">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <span class="module-badge">Gestión</span>
+        <h1 class="module-title">Listado de libros</h1>
+        <p class="module-text">
+          Consulta, administra y mantén organizado tu catálogo de libros.
+        </p>
+      </div>
+
+      <div class="col-lg-4 text-lg-end">
+        <a href="{% url 'nuevo_libro' %}" class="btn btn-dark btn-lg rounded-4">
+          + Nuevo libro
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="glass-card table-card">
+    <div class="table-responsive">
+      <table class="table custom-table align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Autor</th>
+            <th class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for libro in form %}
+          <tr>
+            <td>{{ libro.nombre }}</td>
+            <td>{{ libro.autor }}</td>
+            <td>
+              <div class="action-group">
+                <a href="{% url 'ver' libro.id %}" class="btn btn-sm btn-outline-dark">Ver</a>
+                <a href="{% url 'modificar_libro' libro.id %}" class="btn btn-sm btn-outline-primary">Modificar</a>
+                <a href="{% url 'eliminar' libro.id %}" class="btn btn-sm btn-outline-danger">Eliminar</a>
+              </div>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="3" class="empty-state">No hay libros cargados.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}

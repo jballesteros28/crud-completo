@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Detalle de usuario{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/usuarios.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<section class="detail-section">
+  <div class="glass-card detail-card">
+    <span class="module-badge">Usuarios</span>
+    <h1 class="module-title form-title">Detalle del usuario</h1>
+
+    <div class="detail-grid">
+      <div class="detail-item">
+        <span class="detail-label">Nombre</span>
+        <p>{{ form.nombre }}</p>
+      </div>
+
+      <div class="detail-item">
+        <span class="detail-label">Edad</span>
+        <p>{{ form.edad }}</p>
+      </div>
+
+      <div class="detail-item">
+        <span class="detail-label">Email</span>
+        <p>{{ form.email }}</p>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <a href="{% url 'usuarios' %}" class="btn btn-dark rounded-4">Volver al listado</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

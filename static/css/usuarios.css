@@ -1,0 +1,168 @@
+.module-hero {
+  padding: 2rem;
+}
+
+.module-badge {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.06);
+  color: var(--text-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.module-title {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+
+.module-text {
+  color: var(--text-soft);
+  font-size: 1rem;
+  margin-bottom: 0;
+  max-width: 650px;
+}
+
+.table-card {
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.custom-table {
+  --bs-table-bg: transparent;
+  margin-bottom: 0;
+}
+
+.custom-table thead th {
+  border-bottom: 1px solid var(--border-soft);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+.custom-table tbody td {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  color: var(--text-main);
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.custom-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.action-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-soft);
+  padding: 2rem !important;
+}
+
+.form-card,
+.detail-card {
+  padding: 2rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.form-title {
+  margin-bottom: 0.6rem;
+}
+
+.custom-form {
+  margin-top: 1.5rem;
+}
+
+.custom-form p {
+  margin-bottom: 1rem;
+}
+
+.custom-form label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.custom-form input,
+.custom-form select,
+.custom-form textarea {
+  width: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.custom-form input:focus,
+.custom-form select:focus,
+.custom-form textarea:focus {
+  border-color: rgba(13, 110, 253, 0.45);
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.08);
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  margin-bottom: 0.35rem;
+}
+
+.detail-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-main);
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .module-hero,
+  .form-card,
+  .detail-card {
+    padding: 1.3rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-group {
+    justify-content: flex-start;
+  }
+}

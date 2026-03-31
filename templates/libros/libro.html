@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Detalle de libro{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/libros.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<section class="detail-section">
+  <div class="glass-card detail-card">
+    <span class="module-badge">Libros</span>
+    <h1 class="module-title form-title">Detalle del libro</h1>
+
+    <div class="detail-grid">
+      <div class="detail-item">
+        <span class="detail-label">Nombre</span>
+        <p>{{ objeto.nombre }}</p>
+      </div>
+
+      <div class="detail-item">
+        <span class="detail-label">Autor</span>
+        <p>{{ objeto.autor }}</p>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <a href="{% url 'libros' %}" class="btn btn-dark rounded-4">Volver al listado</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

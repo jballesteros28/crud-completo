@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Formulario de libros{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/libros.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<section class="form-section">
+  <div class="glass-card form-card">
+    <span class="module-badge">Libros</span>
+    <h1 class="module-title form-title">Cargar libro</h1>
+    <p class="module-text">Completa los datos para registrar o editar un libro.</p>
+
+    <form method="post" class="custom-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="form-actions">
+        <input type="submit" value="Guardar libro" class="btn btn-dark btn-lg rounded-4">
+        <a href="{% url 'libros' %}" class="btn btn-light btn-lg rounded-4">Volver</a>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

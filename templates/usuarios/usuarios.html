@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Usuarios{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/usuarios.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<section class="module-header mb-4">
+  <div class="glass-card module-hero">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <span class="module-badge">Gestión</span>
+        <h1 class="module-title">Listado de usuarios</h1>
+        <p class="module-text">
+          Administra los registros de usuarios de forma clara, rápida y ordenada.
+        </p>
+      </div>
+
+      <div class="col-lg-4 text-lg-end">
+        <a href="{% url 'nuevo_usuario' %}" class="btn btn-dark btn-lg rounded-4">
+          + Nuevo usuario
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="glass-card table-card">
+    <div class="table-responsive">
+      <table class="table custom-table align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Email</th>
+            <th class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for cliente in form %}
+          <tr>
+            <td>{{ cliente.nombre }}</td>
+            <td>{{ cliente.edad }}</td>
+            <td>{{ cliente.email }}</td>
+            <td>
+              <div class="action-group">
+                <a class="btn btn-sm btn-outline-dark" href="{% url 'ver' cliente.id %}">Ver</a>
+                <a class="btn btn-sm btn-outline-primary" href="{% url 'modificar' cliente.id %}">Modificar</a>
+                <a class="btn btn-sm btn-outline-danger" href="{% url 'eliminar' cliente.id %}">Eliminar</a>
+              </div>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="4" class="empty-state">No hay usuarios cargados.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}
