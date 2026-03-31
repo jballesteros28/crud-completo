@@ -46,9 +46,9 @@
             <td>{{ libro.autor }}</td>
             <td>
               <div class="action-group">
-                <a href="{% url 'ver' libro.id %}" class="btn btn-sm btn-outline-dark">Ver</a>
+                <a href="{% url 'ver_libro' libro.id %}" class="btn btn-sm btn-outline-dark">Ver</a>
                 <a href="{% url 'modificar_libro' libro.id %}" class="btn btn-sm btn-outline-primary">Modificar</a>
-                <a href="{% url 'eliminar' libro.id %}" class="btn btn-sm btn-outline-danger">Eliminar</a>
+                <a href="{% url 'eliminar_libro' libro.id %}" class="btn btn-sm btn-outline-danger">Eliminar</a>
               </div>
             </td>
           </tr>

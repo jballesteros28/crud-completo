@@ -28,6 +28,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", 'crud-completo-rssl.onrender.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://crud-completo-rssl.onrender.com",
+]
+
 
 # Application definition
 

@@ -48,9 +48,9 @@
             <td>{{ cliente.email }}</td>
             <td>
               <div class="action-group">
-                <a class="btn btn-sm btn-outline-dark" href="{% url 'ver' cliente.id %}">Ver</a>
-                <a class="btn btn-sm btn-outline-primary" href="{% url 'modificar' cliente.id %}">Modificar</a>
-                <a class="btn btn-sm btn-outline-danger" href="{% url 'eliminar' cliente.id %}">Eliminar</a>
+                <a class="btn btn-sm btn-outline-dark" href="{% url 'ver_usuario' cliente.id %}">Ver</a>
+                <a class="btn btn-sm btn-outline-primary" href="{% url 'modificar_usuario' cliente.id %}">Modificar</a>
+                <a class="btn btn-sm btn-outline-danger" href="{% url 'eliminar_usuario' cliente.id %}">Eliminar</a>
               </div>
             </td>
           </tr>
