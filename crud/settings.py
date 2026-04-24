@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^uqi2gcc9a^djt1=$hwe=(zyz^l8pxsn=3b5il60ot+z*1ra-g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", 'crud-completo-rssl.onrender.com']
 
@@ -83,23 +83,23 @@ WSGI_APPLICATION = 'crud.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sistema_turnos_z251',
-        'USER': 'sistema_turnos_z251_user',
-        'PASSWORD': 'RnCsSCujyqZxXsFNv83kzCfjfsPdnv6W',
+        'NAME': 'projects_database_srwp',
+        'USER': 'projects_database_srwp_user',
+        'PASSWORD': 'vxZ8xOLbLNu5SrKPdncSxPadNB1Cu0NQ',
         'HOST': 'dpg-d70l5m9r0fns73cu4q40-a',
         'PORT': '5432'
     }
-}"""
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'libros.db'
-    }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'libros.db'
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
