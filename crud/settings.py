@@ -89,7 +89,7 @@ DATABASES = {
         'NAME': 'crud',
         'USER': 'projects_database_srwp_user',
         'PASSWORD': 'vxZ8xOLbLNu5SrKPdncSxPadNB1Cu0NQ',
-        'HOST': 'dpg-d70l5m9r0fns73cu4q40-a',
+        'HOST': 'dpg-d7lluv3eo5us73dnq690-a',
         'PORT': '5432'
     }
 }
