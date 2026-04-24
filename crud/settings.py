@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'crud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'projects_database_srwp',
+        'NAME': 'crud',
         'USER': 'projects_database_srwp_user',
         'PASSWORD': 'vxZ8xOLbLNu5SrKPdncSxPadNB1Cu0NQ',
         'HOST': 'dpg-d70l5m9r0fns73cu4q40-a',
