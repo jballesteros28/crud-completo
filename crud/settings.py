@@ -87,9 +87,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'crud',
-        'USER': 'projects_database_srwp_user',
-        'PASSWORD': 'vxZ8xOLbLNu5SrKPdncSxPadNB1Cu0NQ',
-        'HOST': 'dpg-d7lluv3eo5us73dnq690-a',
+        'USER': 'database_general_user',
+        'PASSWORD': 'QlxkZAU8XlTeQ0z4dLiLrWYFetbYcxxB',
+        'HOST': 'dpg-d9foon3eo5us73ar37u0-a',
         'PORT': '5432'
     }
 }
